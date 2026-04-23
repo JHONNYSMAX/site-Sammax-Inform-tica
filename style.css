@@ -1,0 +1,128 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #d7d5eb;
+  color: #faeeee;
+}
+
+#bg-animation {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: #0e0238;
+}
+
+header {
+  background-color: #000;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 40px;
+}
+
+header img { height: 140px; }
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav ul li a { font-family: 'Orbitron', sans-serif; color: #00aaff; text-decoration: none; font-weight: bold; }
+
+.hero {
+  background: linear-gradient(to right, #0a3d62, #1e90ff);
+  color: white; text-align: center; padding: 80px 20px;
+}
+
+.btn { background-color: #ff7f50; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+
+/* Suporte */
+#como-funciona { padding: 50px 40px; text-align: center; color: white; }
+.suporte-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.card { width: 220px; height: 160px; perspective: 1000px; cursor: pointer; position: relative; }
+.card .front, .card .back {
+  position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  padding: 15px; font-weight: bold; font-size: 0.95em; text-align: center; transition: transform 0.6s;
+}
+.card .front { background: linear-gradient(135deg, #0a3d62, #1e90ff); color: #fff; box-shadow: 0 0 10px rgba(30,144,255,0.6); }
+.card .back { background: #25D366; color: #fff; transform: rotateY(180deg); box-shadow: 0 0 10px rgba(37,211,102,0.6); }
+.card.flip .front { transform: rotateY(180deg); }
+.card.flip .back { transform: rotateY(0deg); }
+
+#servicos {
+  padding: 50px 40px;
+  text-align: center; /* centraliza o título e o conteúdo */
+}
+
+#servicos h2 {
+  margin-bottom: 20px;
+}
+
+#servicos ul {
+  list-style: none;       /* remove os marcadores da lista */
+  padding: 0;
+  margin: 0 auto;         /* centraliza a lista */
+  display: inline-block;  /* faz a lista se comportar como bloco centralizado */
+  text-align: left;       /* mantém os ícones e textos alinhados dentro do bloco */
+}
+
+#servicos ul li {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+#servicos ul li i {
+  margin-right: 8px;
+  color: #1e90ff; /* cor dos ícones */
+}
+
+
+#planos {
+  padding: 50px 40px;
+  text-align: center; /* centraliza o título e o conteúdo */
+}
+
+#planos h2 {
+  margin-bottom: 20px;
+}
+
+.planos-container {
+  display: flex;
+  justify-content: center; /* centraliza os cards */
+  gap: 20px;
+  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+}
+
+.plano {
+  background-color: rgb(54,129,228);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(2,116,31,0.1);
+  text-align: center; /* centraliza o texto dentro do card */
+}
+
+.bronze { border-top: 5px solid #cd7f32; }
+.prata { border-top: 5px solid #c0c0c0; }
+.ouro { border-top: 5px solid #ffd700; }
+
+
+/* Contato */
+#contato { padding: 50px 40px; text-align: center; }
+.contato-bloco { background-color: #fff; color: #000; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2); padding: 30px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+.contato-info { flex: 1; min-width: 250px; text-align: left; }
+.contato-info p { font-size: 1.1em; margin: 10px 0; }
+.contato-numero { color: #230e5f; font-weight: bold; font-size: 1.2em; text-shadow: 0 0 5px #051177; }
+.btn-whatsapp-bloco {
+  display: inline-block; margin-top: 15px;
+  background-color: #25D366; color: #fff;
+  padding: 12px 20px; border-radius: 8px;
+  text-decoration: none; font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-whatsapp-bloco i { margin-right: 8px; }
+.btn-whatsapp-bloco:hover { background-color: #1ebe5d; box-shadow: 0 0 10px #25D366; transform: scale(1.05); }
+.contato-mapa { flex: 1; min-width: 300px; }
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
